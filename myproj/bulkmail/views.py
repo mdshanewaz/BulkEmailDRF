@@ -13,6 +13,7 @@ from .serializers import *
 
 class BulkMailView(views.APIView):
     permission_classes = [AllowAny,]
+    template_name = 'index.html'
     serializer_class = BulkEmailSerializer
 
     def post(self, request, format=None):
