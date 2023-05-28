@@ -22,7 +22,7 @@ class BulkMailView(views.APIView):
             subject = serializer.validated_data['subject']
             message = serializer.validated_data['message']
 
-            send_mail(subject, message, 'mdshanewazdevp@gmail.com', recipients)
+            send_mail(subject, message, 'exmp@g.com', recipients)
             return Response({'message': 'Bulk email is sent'})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
